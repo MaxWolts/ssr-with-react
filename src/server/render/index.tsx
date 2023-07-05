@@ -28,6 +28,12 @@ import { template } from './template'
     enviarlo al cliente para su renderización posterior.
 */
 
+/*ServerStyleSheet es propio de styled-components y lo que hace es extraer los estilos
+para luego añadirlos a nuestra pagina, con esto ahora los estilos estaran aun cuando desactives el JS.
+
+Cada libreria o tiene su forma de trabajar con el SSR.
+*/
+
 export const render = (url:string, initialProps={}) => {
     const sheet = new ServerStyleSheet()
     try {
