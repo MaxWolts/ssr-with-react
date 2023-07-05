@@ -3,9 +3,18 @@ import type { Express, Request, Response } from "express"
 import { config } from "./config"
 import { template } from "./render/template"
 import { render } from "./render"
+import { webpackMiddleware } from "./middlewares/webpackMiddleware"
 import axios from "axios"
 
 const app: Express = express()
+
+const isDev = process.env.NODE_ENV !== 'production'
+
+if (isDev) {
+    app.use(webpackMiddleware())
+} else {
+    app.use(express.static('dist'))
+}
 
 app.use(express.static('dist'))
 
