@@ -8,6 +8,10 @@ import axios from "axios"
 
 const app: Express = express()
 
+/* 
+    se activa este middleware si se encuentra en modo desarrollo
+    si no usara el build.
+*/
 const isDev = process.env.NODE_ENV !== 'production'
 
 if (isDev) {

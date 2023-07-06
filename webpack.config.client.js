@@ -1,3 +1,7 @@
+/*
+  HotModuleReplacementPlugin es algo que solo debe activarse en modo
+  desarrollo.
+*/
 const { HotModuleReplacementPlugin } = require('webpack')
 const path = require('path')
 const dotenv = require('dotenv')
@@ -11,6 +15,12 @@ const PORT = process.env.PORT
 let plugins = []
 let entries = ['./src/app/index.tsx']
 
+
+/*
+  si esta en modo desarrolllo se agregara el plugin
+  el entry dato se encuentra en la documentación.
+
+*/
 if(isDev) {
   entries.unshift('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true')
   plugins.push(new HotModuleReplacementPlugin())
