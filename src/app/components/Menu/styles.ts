@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const MenuButton = styled.button`
-  display: ${({ hidden }) => hidden ? 'none' : 'block'};
+  display: ${({ hidden }) => hidden ? 'none' : 'grid'};
+  place-content: center;
   border: none;
   background: linear-gradient(270deg, #2646A6,#0C87F2);
   font-size: 1.5rem;
@@ -12,11 +13,12 @@ export const MenuButton = styled.button`
   position: fixed;
   top: 32px;
   right: 32px;
-  z-index: 10;
+  z-index: 1;
   cursor: pointer;
 `
 
 export const MenuContainer = styled.menu`
+  z-index: 2;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -26,10 +28,10 @@ export const MenuContainer = styled.menu`
   position: fixed;
   top: 0;
   right: ${({hidden}) => hidden ? 'calc(-300px - 4rem)' : '0px'};
-  z-index: 1;
-  transition: 200ms;
+  /* z-index: 1; */
+  transition: right linear 200ms;
   background: #2646A6;
-  box-shadow: -16px 10px 41px 0px rgba(133,133,133,0.66);
+  box-shadow: -3px 8px 0px 7px rgb(133 194 250);
 
   button {
     border: none;
