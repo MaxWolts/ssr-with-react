@@ -4,7 +4,7 @@ export const MenuButton = styled.button`
   display: ${({ hidden }) => hidden ? 'none' : 'grid'};
   place-content: center;
   border: none;
-  background: linear-gradient(270deg, #2646A6,#0C87F2);
+  background: linear-gradient(315deg,#2646A6,#0C87F2);
   font-size: 1.5rem;
   color: white;
   border-radius: 50%;
@@ -34,11 +34,13 @@ export const MenuContainer = styled.menu`
   box-shadow: -3px 8px 0px 7px rgb(133 194 250);
 
   button {
+    display: grid;
+    justify-content: center;
+    align-self: end;
     border: none;
     background: transparent;
     color: white;
     font-size: 1.5rem;
-    display: inline-block;
     width: 40px;
     cursor: pointer;
   }
@@ -46,6 +48,7 @@ export const MenuContainer = styled.menu`
   ul {
     color: white;
     font-size: 2rem;
+    letter-spacing: .1rem;
     list-style: none;
     display: flex;
     flex-direction: column;

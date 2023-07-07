@@ -15,7 +15,8 @@ export const StyledLandingCard = styled.div`
   justify-content: space-around;
 
   & > .message {
-    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-size: 2rem;
     margin: 0;
   }
 

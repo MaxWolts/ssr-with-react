@@ -9,6 +9,7 @@ export const StyledHero = styled.section`
   & > h1 {
     text-transform: uppercase;
     font-size: 3rem;
+    letter-spacing: .3rem;
     text-align: center;
     /* color: #2646A6; */
     color: #f9f9f9;
@@ -17,9 +18,10 @@ export const StyledHero = styled.section`
   & > p {
     margin-top: 3rem;
     max-width: 260px;
+    letter-spacing: .1rem;
     text-align: center;
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 2rem;
     color: #a6ccfa;
   }
 
@@ -40,7 +42,7 @@ export const StyledHero = styled.section`
       text-align: left;
       margin-top: 120px;
       margin-bottom: 0%;
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
 
     & > picture {
@@ -54,7 +56,7 @@ export const StyledHero = styled.section`
     & > p {
       margin-top: 0%;
       max-width: none;
-      font-size: 2rem;
+      font-size: 3rem;
       text-align: left;
       align-self: baseline;
     }

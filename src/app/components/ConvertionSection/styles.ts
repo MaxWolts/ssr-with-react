@@ -12,6 +12,7 @@ export const StyledConversionSection = styled.section`
     margin-top: 4.5rem;
     grid-area: title;
     text-align: center;
+    font-size: 3rem;
     color: #f9f9f9;
   }
 
@@ -28,7 +29,8 @@ export const StyledConversionSection = styled.section`
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
+    letter-spacing: .1rem;
+    font-size: 2rem;
     border-radius: 21px;
     padding: 10px 8px;
     margin-top: 32px;

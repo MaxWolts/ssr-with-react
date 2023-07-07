@@ -5,6 +5,7 @@ export const Footer = () => {
   return(
     <StyledFooter>
       <p>Una aplicación web hecha por <a href="https://twitter.com/codevars">@codevars</a> con mucho 💙 para los estudiantes de Platzi.</p>
+      <p>Modificada por <a href="https://twitter.com/max_wolts">@max_wolts</a>, uno de sus estudiantes. 😊</p>
     </StyledFooter>
   )
 }
