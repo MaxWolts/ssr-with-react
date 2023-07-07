@@ -6,12 +6,14 @@ export const StyledHighlitedContent = styled.section`
   & > h2 {
     font-weight: bold;
     font-size: 1.5rem;
+    color: #f9f9f9;
   }
   
   & > .message {
     margin-top: 2rem;
     font-size: 1.125rem;
     line-height: 150%;
+    color: #a6ccfa;
   }
 
   & > .cards-wrapper {

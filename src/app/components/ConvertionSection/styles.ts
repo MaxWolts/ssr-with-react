@@ -12,6 +12,7 @@ export const StyledConversionSection = styled.section`
     margin-top: 4.5rem;
     grid-area: title;
     text-align: center;
+    color: #f9f9f9;
   }
 
   & > .picture {
@@ -21,6 +22,7 @@ export const StyledConversionSection = styled.section`
   }
 
   & > .link {
+    color: #f9f9f9;
     width: 60%;
     max-width: 320px;
     display: inline-block;

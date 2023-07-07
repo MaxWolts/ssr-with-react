@@ -8,7 +8,7 @@ export const StyledLandingCard = styled.div`
   width: 240px;
   height: 265px;
   padding: 1.5rem;
-  background: linear-gradient(270deg, #2646A6,#0C87F2);
+  background: linear-gradient(315deg, #2646A6,#0C87F2);
   box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.40);
   border-radius: 24px;
   color: white;
