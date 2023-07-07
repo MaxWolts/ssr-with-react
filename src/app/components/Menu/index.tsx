@@ -26,7 +26,7 @@ export const Menu = () => {
             </a>
           </li>
           <li>
-            <a href="/galaxies" onClick={closeMenu}>
+            <a href="/galaxias" onClick={closeMenu}>
               Galaxias
             </a>
           </li>

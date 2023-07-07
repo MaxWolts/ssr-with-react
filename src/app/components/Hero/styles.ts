@@ -10,7 +10,8 @@ export const StyledHero = styled.section`
     text-transform: uppercase;
     font-size: 3rem;
     text-align: center;
-    color: #2646A6;
+    /* color: #2646A6; */
+    color: #f9f9f9;
   }
 
   & > p {
@@ -19,6 +20,7 @@ export const StyledHero = styled.section`
     text-align: center;
     font-weight: bold;
     font-size: 1.125rem;
+    color: #a6ccfa;
   }
 
   @media screen and (min-width: 1024px) {
