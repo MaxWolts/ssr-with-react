@@ -9,6 +9,13 @@ const GalaxiesPageWrapper = styled.div`
   flex-direction: column;
   margin: 0px 3rem;
   width: calc(100% - 6rem);
+  min-height: 100vh;
+
+  & >h1 {
+    color: #f9f9f9;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+  }
 `
 
 type Props = {
