@@ -1,10 +1,26 @@
 import styled from 'styled-components';
 
+const ThemeColors = {
+  'pink': '#DD42B6',
+  'blue': '#2646A6',
+  'lightBlue': '#28B3DD'
+}
+const ThemeColorsButton = {
+  'pink': 'linear-gradient(315deg,#a71ca3,#DD42B6)',
+  'lightBlue': 'linear-gradient(315deg,#2646A6,#28B3DD)',
+  'blue': 'linear-gradient(315deg,#2646A6,#0C87F2)',
+}
+const ThemeColorsShadow= {
+  'pink': '-3px 6px 0px 7px rgb(245 188 235)',
+  'lightBlue': '-3px 6px 0px 7px rgb(213 225 237);',
+  'blue': '-3px 6px 0px 7px rgb(133 194 250)',
+}
+
 export const MenuButton = styled.button`
   display: ${({ hidden }) => hidden ? 'none' : 'grid'};
   place-content: center;
   border: none;
-  background: linear-gradient(315deg,#2646A6,#0C87F2);
+  background: ${({color}) => ThemeColorsButton[color]};
   font-size: 1.5rem;
   color: white;
   border-radius: 50%;
@@ -30,8 +46,8 @@ export const MenuContainer = styled.menu`
   right: ${({hidden}) => hidden ? 'calc(-300px - 4rem)' : '0px'};
   /* z-index: 1; */
   transition: right linear 200ms;
-  background: #2646A6;
-  box-shadow: -3px 8px 0px 7px rgb(133 194 250);
+  background: ${({color}) => ThemeColors[color]};
+  box-shadow: ${({color}) => ThemeColorsShadow[color]};
 
   button {
     display: grid;
@@ -59,5 +75,25 @@ export const MenuContainer = styled.menu`
       text-decoration: none;
       color: white;
     }
+    button {
+      height: 44px;
+      width: 44px;
+      
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    .lightBlue {
+      background-color: ${ThemeColors['lightBlue']};
+    }
+    .blue {
+      background-color: ${ThemeColors['blue']};
+    }
+    .pink {
+      background-color: ${ThemeColors['pink']};
+    }
+  }
+  .themeButtons {
+    flex-direction: row;
+    gap: 1rem;
   }
 `
