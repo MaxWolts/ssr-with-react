@@ -20,7 +20,7 @@ export const MenuButton = styled.button`
   display: ${({ hidden }) => hidden ? 'none' : 'grid'};
   place-content: center;
   border: none;
-  background: ${({color}) => ThemeColorsButton[color]};
+  background: ${({theme}) => ThemeColorsButton[theme]};
   font-size: 1.5rem;
   color: white;
   border-radius: 50%;
@@ -46,8 +46,8 @@ export const MenuContainer = styled.menu`
   right: ${({hidden}) => hidden ? 'calc(-300px - 4rem)' : '0px'};
   /* z-index: 1; */
   transition: right linear 200ms;
-  background: ${({color}) => ThemeColors[color]};
-  box-shadow: ${({color}) => ThemeColorsShadow[color]};
+  background: ${({theme}) => ThemeColors[theme]};
+  box-shadow: ${({theme}) => ThemeColorsShadow[theme]};
 
   button {
     display: grid;

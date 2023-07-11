@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
+import useTheme from '../../hooks/useTheme';
 import { Link } from 'react-router-dom';
 import { MenuButton, MenuContainer } from "./styles"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-type colors = 'pink' | 'lightBlue' | 'blue'
-type Props = {
-  setThemeColor: (color:colors) => void,
-  themeColor: colors
-}
 
-export const Menu = ({ setThemeColor, themeColor }: Props) => {
+export const Menu = () => {
   const [menuIsVisible, setMenuVisibility] = useState(false)
+  const [theme, setThemeColor] = useTheme()
   const openMenu = () => setMenuVisibility(true)
   const closeMenu = () => {
     setMenuVisibility(false)
@@ -18,10 +15,10 @@ export const Menu = ({ setThemeColor, themeColor }: Props) => {
 
   return (
     <>
-      <MenuButton hidden={menuIsVisible} onClick={openMenu} color={themeColor}>
+      <MenuButton hidden={menuIsVisible} onClick={openMenu} theme={theme}>
         <FontAwesomeIcon icon={faBars} />
       </MenuButton>
-      <MenuContainer hidden={!menuIsVisible} color={themeColor}>
+      <MenuContainer hidden={!menuIsVisible} theme={theme}>
         <button onClick={closeMenu} aria-label="cerrar">
           <FontAwesomeIcon icon={faTimes} />
         </button>
@@ -42,9 +39,7 @@ export const Menu = ({ setThemeColor, themeColor }: Props) => {
             <button className='button-color blue' aria-label='select color blue' onClick={() => {setThemeColor('blue')}}></button>
           </li>
           <li>
-            <button className='button-color pink' aria-label='select color pink' onClick={() => {
-              setThemeColor('pink')
-              }}></button>
+            <button className='button-color pink' aria-label='select color pink' onClick={() => {setThemeColor('pink')}}></button>
           </li>
           <li>
             <button className='button-color lightBlue' aria-label='select color light blue' onClick={() => {setThemeColor('lightBlue')}}></button>
