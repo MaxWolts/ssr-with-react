@@ -3,6 +3,8 @@ import React from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { App } from './containers/App';
 import { BrowserRouter } from 'react-router-dom';
+
+
 import './assets/favicon.ico'
 
 const container = document.getElementById('app')
@@ -19,8 +21,14 @@ se cargue completamente en el navegador.
 */
 const initialProps = window.__INITIAL_PROPS__
 
-hydrateRoot( container,
-    <BrowserRouter>
-        <App {...initialProps} />
-    </BrowserRouter>
-)
+const Index = () => {
+    
+    
+    return (
+      <BrowserRouter>
+        <App {...initialProps}/>
+      </BrowserRouter>
+    );
+  };
+  
+hydrateRoot(container, <Index />);

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHero = styled.section`
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@ export const StyledHero = styled.section`
   }
 
   & > p {
-    margin-top: 3rem;
+    padding-top: 3rem;
     max-width: 260px;
     letter-spacing: .1rem;
     text-align: center;
@@ -32,7 +32,8 @@ export const StyledHero = styled.section`
     'image title'
     'image subtitle';
     column-gap: 120px;
-    margin: 80px auto;
+    padding-top: 80px;
+    margin: 0px auto 80px;
     max-width: 65%;
 
     & > h1 {

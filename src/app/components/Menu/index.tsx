@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import useTheme from '../../hooks/useTheme';
 import { Link } from 'react-router-dom';
 import { MenuButton, MenuContainer } from "./styles"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-
-export const Menu = () => {
+type Props = {
+  theme: 'blue' | 'pink' | 'lightBlue',
+  setThemeColor: (color:string) => void
+}
+export const Menu = ({theme, setThemeColor}: Props) => {
   const [menuIsVisible, setMenuVisibility] = useState(false)
-  const [theme, setThemeColor] = useTheme()
   const openMenu = () => setMenuVisibility(true)
   const closeMenu = () => {
     setMenuVisibility(false)
