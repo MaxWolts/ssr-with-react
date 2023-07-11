@@ -23,6 +23,7 @@ export const StyledHighlitedContent = styled.section`
     column-gap: 3rem;
     overflow-x: auto;
     margin-top: 4.5rem;
+    padding: 1.5rem 0;
   }
 
   @media screen and (min-width: 1024px) {
